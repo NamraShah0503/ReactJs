@@ -1,12 +1,12 @@
 import React from 'react'
 
 export const Users = (props) => {
-    console.log(props.user)
+    // console.log(props.user)
     return (
     <div>
-        <h1>Name = {props.name}</h1>
-        <h1>Age = {props.age}</h1>
-        <p>{props.name}</p>
+        <h1>Name = {props.userData.name}</h1>
+        <h1>Age = {props.userData.age}</h1>
+      <button onClick={props.testFunc}>Click Me</button>
     </div>
   )
 }
