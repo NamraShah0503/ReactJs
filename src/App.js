@@ -15,6 +15,7 @@ import { useRoutes } from 'react-router-dom';
 import { AddStudent } from './component/students/AddStudent';
 import { ListStudents } from './component/students/ListStudents';
 import { UpdateStudent } from './component/students/UpdateStudent';
+import { Weather } from './component/Weather';
 
 
 
@@ -35,6 +36,7 @@ var payload = "This is payload"
         <Route path='/updateStudent/:id' element ={<UpdateStudent/>}></Route>
         
        </Routes>
+       <Weather/>
     </div>
   );
   
