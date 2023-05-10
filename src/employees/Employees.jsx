@@ -1,5 +1,6 @@
 import React ,{useState}from 'react'
 import { EmployeeList } from './EmployeeList'
+import { AddEmployee } from './AddEmployee'
 
 export const Employees = () => {
  
@@ -27,11 +28,17 @@ function deleteEmployee(id){
     employees = employeeData.filter((e)=>{
         return e.id !== id
     })
-    setemployeeData(employees)
+    setemployeeData(employees);
+}
+
+const addEmployees = (employee)=>{
+    employees = [...employeeData,employee]//spread operator
+    setemployeeData(employees);
 }
 
 return (
     <div>
+        <AddEmployee addEmployees={addEmployees}/>
         <EmployeeList emp ={employeeData} deleteEmployee={deleteEmployee}/>
     </div>
   )
