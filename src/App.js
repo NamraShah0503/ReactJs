@@ -14,6 +14,7 @@ import { FeedBack } from './component/users/FeedBack';
 import { useRoutes } from 'react-router-dom';
 import { AddStudent } from './component/students/AddStudent';
 import { ListStudents } from './component/students/ListStudents';
+import { UpdateStudent } from './component/students/UpdateStudent';
 
 
 
@@ -31,6 +32,7 @@ var payload = "This is payload"
         <Route path='/feedback' element ={<FeedBack/>}></Route>
         <Route path='/addStudent' element ={<AddStudent/>}></Route>
         <Route path='/listStudents' element ={<ListStudents/>}></Route>
+        <Route path='/updateStudent/:id' element ={<UpdateStudent/>}></Route>
         
        </Routes>
     </div>

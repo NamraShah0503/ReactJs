@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 
 
@@ -43,6 +44,8 @@ const deleteStudent = async (id) =>{
         });
   }
 }
+
+
 // useEffect(() => {
 //   listStudents();
 // }, []);
@@ -82,7 +85,8 @@ const deleteStudent = async (id) =>{
                 <td>{s.name}</td>
                 <td>{s.email}</td>
                 <td>{s.age}</td>
-              <td><button onClick={()=> deleteStudent(s._id)}>Delete</button></td>
+              <td><button onClick={()=> deleteStudent(s._id)}>Delete</button>
+              <Link to={`/updateStudent/${s._id}`} > Update</Link></td>
                 
               </tr>  
             );
